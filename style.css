@@ -1,0 +1,147 @@
+header {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 1340px;
+}
+
+body {
+  width: 1340px;
+  margin: auto;
+  font-family: Raleway;
+  font-weight: bold;
+}
+nav ul {
+  width: 436px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 905px;
+  padding-top: 35px;
+}
+nav a:hover {
+  color: #d8d8d8;
+  border-top: 2px solid #0065fc;
+  padding-top: 49px;
+}
+.local {
+  position: relative;
+  top: 1px;
+  left: 4px;
+  width: 52px;
+  max-height: 51px;
+  text-align: center;
+  color: black;
+  background-color: #7f7f7f;
+  border-radius: 15px 0px 0px 15px;
+  padding: 16px;
+}
+#search_button {
+  position: relative;
+  left: 257px;
+  width: 134px;
+  height: 51px;
+  background-color: #0065fc;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+}
+#search_line {
+  position: absolute;
+  width: 234px;
+  height: 45px;
+  font-size: 1.1em;
+  font-family: Raleway;
+  font-weight: bold;
+  padding-left: 17px;
+}
+.filtres ul {
+  width: 65%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.filtres li {
+  max-height: 46px;
+  text-align: right;
+  padding: 17px 20px 16px 62px;
+  border: 2px solid #d9d9d9;
+  border-radius: 46px;
+}
+.vieux_port {
+  width: 302px;
+  height: 389px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+  background-position: center;
+}
+.fort {
+  width: 302px;
+  height: 237px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+  background-position: center;
+}
+.iles {
+  width: 302px;
+  height: 237px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+  background-position: center;
+}
+.calanques {
+  width: 302px;
+  height: 389px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+  background-position: center;
+}
+.notre_dame {
+  width: 302px;
+  height: 237px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+  background-position: center;
+}
+.longchamp {
+  width: 302px;
+  height: 237px;
+  border-radius: 20px;
+  background-image: url("images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+  background-position: center;
+}
+#hebergement {
+  background-color: #f2f2f2;
+}
+#hebergements img {
+  width: 236px;
+  height: 144px;
+  border-radius: 14px;
+}
+#populaires img {
+  width: 236px;
+  height: 144px;
+  border-radius: 14px;
+}
+.bluestar {
+  color: #0065fc;
+}
+.greystar {
+  color: #d9d9d9;
+}
+footer ul {
+  list-style-type: none;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+}
+.prix {
+  font-size: 0.75em;
+}
+.info {
+  color: blue;
+  border: 1px solid 24px;
+  border-color: #7f7f7f;
+}
