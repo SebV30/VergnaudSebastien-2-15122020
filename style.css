@@ -23,6 +23,13 @@ nav ul {
   margin-left: 905px;
   padding-top: 35px;
 }
+nav a {
+  color: black;
+  text-decoration: none;
+}
+.inscription {
+  color: #0065fc;
+}
 nav a:hover {
   color: #0065fc;
   border-top: 2px solid #0065fc;
@@ -58,15 +65,15 @@ nav a:hover {
   font-weight: bold;
   padding-left: 17px;
 }
-.filtres_title {
-  border: none;
-}
 .filtres ul {
-  width: 65%;
+  width: 70%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.filtres_titre {
+  padding-top: 16px;
 }
 .filters_list {
   height: 46px;
@@ -82,7 +89,17 @@ nav a:hover {
   transform: scale(1.25);
   margin-right: 12px;
   margin-left: 3px;
-  padding: 9.5px 11px;
+  padding: 9.5px;
+  border: 1px solid #deebff;
+  border-radius: 23px;
+  background-color: #deebff;
+}
+.ico_filtres_f {
+  color: #0065fc;
+  transform: scale(1.25);
+  margin-right: 12px;
+  margin-left: 3px;
+  padding: 9.5px 13px;
   border: 1px solid #deebff;
   border-radius: 23px;
   background-color: #deebff;
@@ -187,13 +204,13 @@ nav a:hover {
   margin-top: 29px;
   margin-bottom: 0;
   padding-top: 30px;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.5);
   border-radius: 16px 16px 0 0;
 }
 #activites section {
   width: 1340px;
   max-height: 750px;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.5);
   border-radius: 0 0 16px 16px;
   margin: auto;
   padding-top: 10px;
@@ -262,6 +279,9 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
 }
+footer li {
+  padding-top: 13px;
+}
 footer h2 {
   padding-left: 40px;
 }
@@ -270,6 +290,7 @@ footer h2 {
 }
 .info {
   color: blue;
-  border: 1px solid 24px;
-  border-color: #7f7f7f;
+  padding: 2px 8px;
+  border: 1px solid #d9d9d9;
+  border-radius: 24px;
 }
