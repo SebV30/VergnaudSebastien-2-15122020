@@ -181,58 +181,54 @@ nav a:hover {
   color: #d9d9d9;
 }
 
-.vieux_port img {
+.titre {
+  width: 1340px;
+  margin: auto;
+  margin-top: 29px;
+  margin-bottom: 0;
+  padding-top: 30px;
+  background-color: whitesmoke;
+  border-radius: 16px 16px 0 0;
+}
+#activites section {
+  width: 1340px;
+  max-height: 750px;
+  background-color: whitesmoke;
+  border-radius: 0 0 16px 16px;
+  margin: auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.vieux_port img,
+.calanques img {
   width: 302px;
-  height: 446px;
-  object-fit: contain;
+  height: 460px;
 }
 .fort img {
   width: 302px;
   height: 237px;
-  border-radius: 20px;
 }
 .iles img {
   width: 302px;
   height: 166px;
-  border-radius: 20px;
-}
-.calanques img {
-  width: 302px;
-  height: 389px;
-  border-radius: 20px;
+  margin-top: auto;
 }
 .notre_dame img {
   width: 302px;
-  height: 237px;
-  border-radius: 20px;
+  height: 195px;
 }
 .longchamp img {
   width: 302px;
-  height: 237px;
-  border-radius: 20px;
+  height: 210px;
 }
 
-#activites {
-  height: 600px;
-  background-color: rgb(141, 247, 141);
-  border-radius: 16px;
-  margin-top: 29px;
-  padding-top: 10px;
-  padding-left: 50px;
-  display: flex;
-  flex-direction: row;
-}
-#activites_l article {
-  border-radius: 20px;
-  max-height: 550px;
-  margin-right: 44px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 #activites img {
-  border-radius: 16px;
-  border-radius: 15px 15px 0 0;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: -4px;
+  margin-right: 35px;
+  margin-left: 5px;
   object-fit: cover;
 }
 #activites a {
@@ -241,13 +237,15 @@ nav a:hover {
 }
 #activites p {
   width: 282px;
-  height: 55px;
+  max-height: 55px;
   margin-top: 0;
-  padding: 23px 0 0 20px;
+  margin-right: 35px;
+  margin-left: 5px;
+  padding-left: 21px;
+  padding-top: 23px;
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
-
 footer ul {
   list-style-type: none;
 }
