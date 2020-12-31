@@ -14,13 +14,15 @@ body {
 #container {
   margin: 0 50px;
 }
+
+/************  Navigation  ************/
 nav ul {
   width: 436px;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-left: 905px;
+  margin-left: 800px;
   padding-top: 35px;
 }
 nav a {
@@ -33,8 +35,10 @@ nav a {
 nav a:hover {
   color: #0065fc;
   border-top: 2px solid #0065fc;
-  padding-top: 49px;
+  padding-top: 30px;
 }
+
+/************  Ville & Filtres  ************/
 .local {
   position: relative;
   top: 1px;
@@ -84,13 +88,21 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
 }
+.filtres li:hover,
+.filtres a:hover {
+  color: white;
+  background-color: #0065fc;
+}
+.filtres a {
+  color: black;
+  text-decoration: none;
+}
 .ico_filtres {
   color: #0065fc;
   transform: scale(1.25);
   margin-right: 12px;
   margin-left: 3px;
   padding: 9.5px;
-  border: 1px solid #deebff;
   border-radius: 23px;
   background-color: #deebff;
 }
@@ -100,10 +112,11 @@ nav a:hover {
   margin-right: 12px;
   margin-left: 3px;
   padding: 9.5px 13px;
-  border: 1px solid #deebff;
   border-radius: 23px;
   background-color: #deebff;
 }
+
+/************  Hébergements  ************/
 
 #places {
   display: flex;
@@ -133,8 +146,8 @@ nav a:hover {
 #pos_h article {
   width: 236px;
   height: 189px;
+  padding: 5px;
   background-color: white;
-  border: 5px solid white;
   border-radius: 16px;
 }
 #pos_h p {
@@ -146,6 +159,16 @@ nav a:hover {
   color: black;
   text-decoration: none;
 }
+.prix {
+  font-size: 0.7em;
+}
+.info {
+  color: blue;
+  padding: 2px 8px;
+  border-radius: 24px;
+}
+
+/************  Populaires  ************/
 
 #populaires {
   width: 420px;
@@ -174,8 +197,8 @@ nav a:hover {
 #pos_p article {
   width: 333px;
   height: 134px;
+  padding: 5px;
   background-color: white;
-  border: 5px solid white;
   border-radius: 16px;
   display: flex;
   flex-direction: row;
@@ -198,71 +221,109 @@ nav a:hover {
   color: #d9d9d9;
 }
 
-.titre {
-  width: 1340px;
-  margin: auto;
-  margin-top: 29px;
-  margin-bottom: 0;
-  padding-top: 30px;
-  background-color: rgba(245, 245, 245, 0.5);
-  border-radius: 16px 16px 0 0;
-}
-#activites section {
-  width: 1340px;
-  max-height: 750px;
-  background-color: rgba(245, 245, 245, 0.5);
-  border-radius: 0 0 16px 16px;
-  margin: auto;
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.vieux_port img,
-.calanques img {
-  width: 302px;
-  height: 460px;
-}
-.fort img {
-  width: 302px;
-  height: 237px;
-}
-.iles img {
-  width: 302px;
-  height: 166px;
-  margin-top: auto;
-}
-.notre_dame img {
-  width: 302px;
-  height: 195px;
-}
-.longchamp img {
-  width: 302px;
-  height: 210px;
-}
+/************  Activités  ************/
 
+#act {
+  width: 1290px;
+  height: 600px;
+  background-color: whitesmoke;
+  border-radius: 16px;
+  margin-top: 60px;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+#activites {
+  width: 1340px;
+  height: 500px;
+  margin-left: -50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 225px);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+#activites article {
+  width: 300px;
+}
 #activites img {
-  border-radius: 20px 20px 0 0;
   margin-bottom: -4px;
-  margin-right: 35px;
-  margin-left: 5px;
-  object-fit: cover;
+  border-radius: 16px 16px 0 0;
 }
 #activites a {
   color: black;
   text-decoration: none;
 }
-#activites p {
-  width: 282px;
-  max-height: 55px;
+#activites h3 {
+  width: 280px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
   margin-top: 0;
-  margin-right: 35px;
-  margin-left: 5px;
-  padding-left: 21px;
-  padding-top: 23px;
   background-color: white;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 16px 16px;
 }
+#port {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#port img,
+#calanques img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+}
+#fort {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+#fort img {
+  width: 300px;
+  height: 195px;
+  object-fit: cover;
+}
+#iles {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+#iles img {
+  width: 300px;
+  height: 170px;
+  margin-top: 13px;
+  object-fit: cover;
+}
+#calanques {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#notre_dame img,
+#longchamp img {
+  width: 300px;
+  height: 182px;
+  object-fit: cover;
+}
+#notre_dame {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+#longchamp {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+/************  Footer  ************/
+
 footer ul {
   list-style-type: none;
 }
@@ -284,13 +345,4 @@ footer li {
 }
 footer h2 {
   padding-left: 40px;
-}
-.prix {
-  font-size: 0.7em;
-}
-.info {
-  color: blue;
-  padding: 2px 8px;
-  border: 1px solid #d9d9d9;
-  border-radius: 24px;
 }
