@@ -47,7 +47,7 @@ nav a:hover {
   max-height: 51px;
   text-align: center;
   color: black;
-  background-color: #7f7f7f;
+  background-color: #f2f2f2;
   border-radius: 15px 0px 0px 15px;
   padding: 16px;
 }
@@ -226,7 +226,6 @@ nav a:hover {
 #act {
   width: 1290px;
   height: 600px;
-  background-color: whitesmoke;
   border-radius: 16px;
   margin-top: 60px;
   padding-top: 10px;
@@ -248,6 +247,7 @@ nav a:hover {
 #activites img {
   margin-bottom: -4px;
   border-radius: 16px 16px 0 0;
+  box-shadow: 5px 5px #f3f3f3a1;
 }
 #activites a {
   color: black;
@@ -345,4 +345,92 @@ footer li {
 }
 footer h2 {
   padding-left: 40px;
+}
+/************  Média Queries  ************/
+
+/***  IPhone 8  ***/
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    margin: auto;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 95%;
+  }
+  #container {
+    margin: 0 20px;
+  }
+
+  .filtres ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #places {
+    width: 374px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /************  Activités  ************/
+
+  #act {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 60px;
+    padding-top: 10px;
+    padding-left: 50px;
+  }
+  #activites {
+    width: 1340px;
+    height: 500px;
+    margin-left: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #activites article {
+    width: 300px;
+  }
+  #activites img {
+    width: 334px;
+    height: 190px;
+    margin-bottom: -4px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 5px 5px #f3f3f3a1;
+  }
+  #activites a {
+    color: black;
+    text-decoration: none;
+  }
+  #activites h3 {
+    width: 280px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+  }
+
+  footer {
+    width: 1440px;
+    background-color: #f2f2f2;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/***  IPad  ***/
+@media (min-width: 376px) and (max-width: 768px) {
+  body {
+    background-color: rgb(28, 230, 62);
+  }
 }
