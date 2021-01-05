@@ -80,7 +80,7 @@ nav a:hover {
   padding-left: 17px;
 }
 .filtres {
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -89,7 +89,7 @@ nav a:hover {
   padding-top: 10px;
 }
 .filtres ul {
-  width: 70%;
+  width: 85%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -97,7 +97,7 @@ nav a:hover {
 }
 .filters_list {
   height: 46px;
-  padding-right: 10px;
+  padding-right: 20px;
   border: 2px solid #d9d9d9;
   border-radius: 46px;
   display: flex;
@@ -220,11 +220,6 @@ nav a:hover {
   display: flex;
   flex-direction: row;
 }
-#pos_p h3 {
-  font-size: 1em;
-  padding-left: 20px;
-  padding-right: 40px;
-}
 #pos_p a {
   color: black;
   text-decoration: none;
@@ -265,7 +260,6 @@ nav a:hover {
 #activites img {
   margin-bottom: -4px;
   border-radius: 16px 16px 0 0;
-  box-shadow: 5px 5px #f3f3f3a1;
 }
 #activites a {
   color: black;
@@ -279,6 +273,7 @@ nav a:hover {
   margin-top: 0;
   background-color: white;
   border-radius: 0 0 16px 16px;
+  box-shadow: 5px 5px #f3f3f3a1;
 }
 #port {
   grid-column-start: 1;
@@ -368,52 +363,76 @@ footer h2 {
 
 /***  IPhone 8  ***/
 @media (max-width: 375px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
   body {
-    width: 375px;
+    width: 100%;
   }
   #container {
     margin: 20px;
   }
-  section h2 {
-    word-wrap: normal;
-  }
-  /************  Navigation  ************/
-  nav ul {
-    width: 375px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap-reverse;
-    padding-top: 35px;
+
+  header {
+    width: auto;
     margin-left: 0;
+    display: grid;
   }
-  nav a {
-    color: black;
-    text-decoration: none;
+  nav ul {
+    width: auto;
+    display: grid;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px 40px;
+    grid-row-gap: 10px;
+  }
+  .heberg {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-top: 10px;
+    font-weight: initial;
+  }
+  .act {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-top: 10px;
+    font-weight: initial;
   }
   .inscription {
-    color: #0065fc;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding-top: 10px;
+    text-decoration: #0065fc;
   }
+
+  /************  Navigation  ************/
+  nav ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin-left: -60px;
+    margin-top: -10px;
+  }
+
   nav a:hover {
-    color: #0065fc;
-    border-top: 2px solid #0065fc;
-    padding-top: 30px;
+    border-bottom: 2px solid #0065fc;
   }
 
   /************  Ville & Filtres  ************/
+  section {
+    margin-top: 70px;
+  }
   .local {
     width: 22px;
   }
 
   #search_band {
-    width: 333px;
+    width: 89%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -428,7 +447,7 @@ footer h2 {
   }
 
   #search_line {
-    width: 241px;
+    width: 100%;
     height: 47px;
     font-size: 1.1em;
     font-family: Raleway;
@@ -436,7 +455,7 @@ footer h2 {
     padding-left: 17px;
   }
   .filtres {
-    width: 335px;
+    width: 100%;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -463,12 +482,12 @@ footer h2 {
   /************  Hébergements  ************/
 
   #places {
-    width: 375px;
+    width: auto;
     display: flex;
     flex-direction: column-reverse;
   }
   #hebergements {
-    width: 335px;
+    width: auto;
     height: auto;
     background-color: white;
     border-radius: 16px;
@@ -477,7 +496,6 @@ footer h2 {
   }
   #hebergements img {
     width: 323px;
-    height: 104px;
   }
   #pos_h {
     display: flex;
@@ -487,14 +505,7 @@ footer h2 {
   #pos_h article {
     width: 323px;
     height: 189px;
-    padding: 5px;
     box-shadow: 5px 5px #f5f5f5;
-  }
-  #pos_h h3 {
-    font-size: 1em;
-    margin-top: 0;
-    padding-left: 12px;
-    padding-top: 13px;
   }
 
   /************  Populaires  ************/
@@ -515,36 +526,14 @@ footer h2 {
   }
   #populaires img {
     width: 127px;
-    height: 134px;
-    border-radius: 10px 0 0 10px;
-    object-fit: cover;
   }
   #pos_p article {
     width: 290px;
-    height: 134px;
-    padding: 5px;
-    background-color: white;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
   }
   #pos_p h3 {
     font-size: 1em;
     padding-left: 20px;
     padding-right: 0px;
-  }
-  #pos_p a {
-    color: black;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .bluestar {
-    color: #0065fc;
-  }
-  .greystar {
-    color: #d9d9d9;
   }
 
   /************  Activités  ************/
@@ -567,29 +556,13 @@ footer h2 {
   #activites img {
     width: 335px;
     height: 190px;
-    margin-bottom: -4px;
-    object-fit: cover;
-    border-radius: 16px 16px 0 0;
-    box-shadow: 5px 5px #f3f3f3a1;
-  }
-  #activites a {
-    color: black;
-    text-decoration: none;
   }
   #activites h3 {
-    width: 375px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    margin-top: 0;
-    background-color: white;
-    border-radius: 0 0 16px 16px;
+    width: 315px;
   }
 
   footer {
-    width: 375px;
-    background-color: #f2f2f2;
-    margin-top: 60px;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
