@@ -623,20 +623,23 @@ footer h2 {
     padding-left: 17px;
   }
   .filtres {
-    width: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
   }
   .filtres h3 {
     padding-top: 10px;
   }
   .filtres ul {
-    width: 100%;
+    width: 80%;
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 10%;
   }
   .filters_list {
     height: 46px;
@@ -644,35 +647,8 @@ footer h2 {
     border: 2px solid #d9d9d9;
     border-radius: 46px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-  }
-  .filtres li:hover,
-  .filtres a:hover {
-    color: white;
-    background-color: #0065fc;
-  }
-  .filtres a {
-    color: black;
-    text-decoration: none;
-  }
-  .ico_filtres {
-    color: #0065fc;
-    transform: scale(1.25);
-    margin-right: 12px;
-    margin-left: 3px;
-    padding: 9.5px;
-    border-radius: 23px;
-    background-color: #deebff;
-  }
-  .ico_filtres_f {
-    color: #0065fc;
-    transform: scale(1.25);
-    margin-right: 12px;
-    margin-left: 3px;
-    padding: 9.5px 13px;
-    border-radius: 23px;
-    background-color: #deebff;
   }
   /************  Hébergements  ************/
 
@@ -681,13 +657,10 @@ footer h2 {
     flex-direction: column-reverse;
   }
   #hebergements {
-    width: 880px;
-    height: 606px;
-    padding-top: 10px;
-    padding-left: 40px;
-    background-color: #f2f2f2;
-    border-radius: 16px;
-    margin-right: 40px;
+    width: auto;
+    height: auto;
+    margin-top: 5%;
+    margin-right: 0px;
   }
   #hebergements img {
     width: 236px;
@@ -698,7 +671,8 @@ footer h2 {
   }
   #pos_h {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
     grid-row-gap: 30px;
   }
   #pos_h article {
@@ -730,21 +704,15 @@ footer h2 {
   /************  Populaires  ************/
 
   #populaires {
-    width: 420px;
-    height: 606px;
-    padding-top: 10px;
-    padding-left: 43px;
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
+    width: auto;
+    height: auto;
   }
   .graph {
     margin-left: 98px;
   }
   #populaires img {
-    width: 127px;
-    height: 134px;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
   }
@@ -754,8 +722,10 @@ footer h2 {
     grid-row-gap: 33px;
   }
   #pos_p article {
-    width: 333px;
-    height: 134px;
+    width: auto;
+    height: auto;
+    margin-right: 40px;
+    margin-bottom: 20px;
     padding: 5px;
     background-color: white;
     border-radius: 16px;
@@ -767,9 +737,10 @@ footer h2 {
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   #pos_p h3 {
-    padding-left: 12px;
+    padding-left: 20px;
   }
 
   .bluestar {
@@ -782,20 +753,20 @@ footer h2 {
   /************  Activités  ************/
 
   #act {
-    width: 1290px;
-    height: 600px;
+    width: auto;
+    height: auto;
     border-radius: 16px;
     margin-top: 60px;
     padding-top: 10px;
     padding-left: 50px;
   }
   #activites {
-    width: 1340px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     margin-left: -50px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 225px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 225px);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
   }
@@ -856,10 +827,10 @@ footer h2 {
     object-fit: cover;
   }
   #calanques {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
   }
   #notre_dame img,
   #longchamp img {
@@ -868,41 +839,28 @@ footer h2 {
     object-fit: cover;
   }
   #notre_dame {
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
   }
   #longchamp {
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 4;
   }
 
   /************  Footer  ************/
 
-  footer ul {
-    list-style-type: none;
+  footer {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   footer a {
     font-weight: initial;
-    color: black;
-    text-decoration: none;
-    margin-right: 230px;
-  }
-  footer {
-    width: 1440px;
-    background-color: #f2f2f2;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  footer li {
-    padding-top: 13px;
-  }
-  footer h2 {
-    padding-left: 40px;
+    margin-right: 0px;
   }
 }
