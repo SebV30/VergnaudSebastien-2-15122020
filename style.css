@@ -25,15 +25,17 @@ nav ul {
   margin-left: 800px;
   padding-top: 35px;
 }
-nav a {
+nav .heberg,
+nav .act {
   color: black;
+}
+nav a {
   text-decoration: none;
 }
 .inscription {
   color: #0065fc;
 }
 nav a:hover {
-  color: #0065fc;
   border-top: 2px solid #0065fc;
   padding-top: 30px;
 }
@@ -226,6 +228,9 @@ nav a:hover {
   display: flex;
   flex-direction: row;
 }
+#pos_p h3 {
+  padding-left: 12px;
+}
 
 .bluestar {
   color: #0065fc;
@@ -341,6 +346,7 @@ footer ul {
   list-style-type: none;
 }
 footer a {
+  font-weight: initial;
   color: black;
   text-decoration: none;
   margin-right: 230px;
@@ -371,12 +377,20 @@ footer h2 {
   }
 
   header {
-    width: auto;
+    width: 100%;
+    margin: 5%;
     margin-left: 0;
     display: grid;
   }
+
+  /************  Navigation  ************/
+
   nav ul {
-    width: auto;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin-left: -60px;
+    margin-top: -10px;
     display: grid;
     position: absolute;
     top: 0px;
@@ -407,19 +421,10 @@ footer h2 {
     grid-row-start: 1;
     grid-row-end: 1;
     padding-top: 10px;
-    text-decoration: #0065fc;
-  }
-
-  /************  Navigation  ************/
-  nav ul {
-    width: 100%;
-    list-style-type: none;
-    text-align: center;
-    margin-left: -60px;
-    margin-top: -10px;
   }
 
   nav a:hover {
+    border-top: none;
     border-bottom: 2px solid #0065fc;
   }
 
@@ -466,17 +471,6 @@ footer h2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
-  .filters_list {
-    height: 46px;
-    padding-right: 10px;
-    margin-right: auto;
-    margin-bottom: 15px;
-    border: 2px solid #d9d9d9;
-    border-radius: 46px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   /************  Hébergements  ************/
@@ -568,14 +562,346 @@ footer h2 {
     justify-content: flex-start;
   }
   footer a {
-    font-weight: initial;
     margin-right: 0px;
   }
 }
 
 /***  IPad  ***/
 @media (min-width: 376px) and (max-width: 768px) {
+  header {
+    width: auto;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   body {
-    background-color: rgb(28, 230, 62);
+    width: 100%;
+  }
+  #container {
+    margin: 20px;
+  }
+  /************  Navigation  ************/
+  nav ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: auto;
+    padding-top: 35px;
+  }
+  nav .heberg,
+  nav .act {
+    font-weight: initial;
+  }
+  nav a:hover {
+    font-weight: bold;
+    font-style: italic;
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    padding-top: 10px;
+    border-bottom: 2px solid #0065fc;
+    padding-bottom: 10px;
+  }
+  /************  Ville & Filtres  ************/
+  #search_band {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #search_line {
+    width: 100%;
+    height: 45px;
+    font-size: 1.1em;
+    font-family: Raleway;
+    font-weight: bold;
+    padding-left: 17px;
+  }
+  .filtres {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .filtres h3 {
+    padding-top: 10px;
+  }
+  .filtres ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .filters_list {
+    height: 46px;
+    padding-right: 20px;
+    border: 2px solid #d9d9d9;
+    border-radius: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .filtres li:hover,
+  .filtres a:hover {
+    color: white;
+    background-color: #0065fc;
+  }
+  .filtres a {
+    color: black;
+    text-decoration: none;
+  }
+  .ico_filtres {
+    color: #0065fc;
+    transform: scale(1.25);
+    margin-right: 12px;
+    margin-left: 3px;
+    padding: 9.5px;
+    border-radius: 23px;
+    background-color: #deebff;
+  }
+  .ico_filtres_f {
+    color: #0065fc;
+    transform: scale(1.25);
+    margin-right: 12px;
+    margin-left: 3px;
+    padding: 9.5px 13px;
+    border-radius: 23px;
+    background-color: #deebff;
+  }
+  /************  Hébergements  ************/
+
+  #places {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #hebergements {
+    width: 880px;
+    height: 606px;
+    padding-top: 10px;
+    padding-left: 40px;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    margin-right: 40px;
+  }
+  #hebergements img {
+    width: 236px;
+    height: 104px;
+    border-radius: 16px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+  }
+  #pos_h {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+  }
+  #pos_h article {
+    width: 236px;
+    height: 189px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 16px;
+  }
+  #pos_h h3 {
+    font-size: 1em;
+    margin-top: 0;
+    padding-left: 12px;
+    padding-top: 13px;
+  }
+  #pos_h a {
+    color: black;
+    text-decoration: none;
+  }
+  .prix {
+    font-size: 0.7em;
+  }
+  .info {
+    color: blue;
+    padding: 2px 8px;
+    border-radius: 24px;
+  }
+
+  /************  Populaires  ************/
+
+  #populaires {
+    width: 420px;
+    height: 606px;
+    padding-top: 10px;
+    padding-left: 43px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .graph {
+    margin-left: 98px;
+  }
+  #populaires img {
+    width: 127px;
+    height: 134px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
+  #pos_p {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 33px;
+  }
+  #pos_p article {
+    width: 333px;
+    height: 134px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+  #pos_p a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+  }
+  #pos_p h3 {
+    padding-left: 12px;
+  }
+
+  .bluestar {
+    color: #0065fc;
+  }
+  .greystar {
+    color: #d9d9d9;
+  }
+
+  /************  Activités  ************/
+
+  #act {
+    width: 1290px;
+    height: 600px;
+    border-radius: 16px;
+    margin-top: 60px;
+    padding-top: 10px;
+    padding-left: 50px;
+  }
+  #activites {
+    width: 1340px;
+    height: 500px;
+    margin-left: -50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 225px);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  #activites article {
+    width: 300px;
+  }
+  #activites img {
+    margin-bottom: -4px;
+    border-radius: 16px 16px 0 0;
+  }
+  #activites a {
+    color: black;
+    text-decoration: none;
+  }
+  #activites h3 {
+    width: 280px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 5px 5px #f3f3f3a1;
+  }
+  #port {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #port img,
+  #calanques img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+  }
+  #fort {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #fort img {
+    width: 300px;
+    height: 195px;
+    object-fit: cover;
+  }
+  #iles {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  #iles img {
+    width: 300px;
+    height: 170px;
+    margin-top: 13px;
+    object-fit: cover;
+  }
+  #calanques {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #notre_dame img,
+  #longchamp img {
+    width: 300px;
+    height: 182px;
+    object-fit: cover;
+  }
+  #notre_dame {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  #longchamp {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
+  /************  Footer  ************/
+
+  footer ul {
+    list-style-type: none;
+  }
+  footer a {
+    font-weight: initial;
+    color: black;
+    text-decoration: none;
+    margin-right: 230px;
+  }
+  footer {
+    width: 1440px;
+    background-color: #f2f2f2;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  footer li {
+    padding-top: 13px;
+  }
+  footer h2 {
+    padding-left: 40px;
   }
 }
