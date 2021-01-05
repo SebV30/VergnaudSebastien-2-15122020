@@ -562,6 +562,7 @@ footer h2 {
     justify-content: flex-start;
   }
   footer a {
+    font-weight: initial;
     margin-right: 0px;
   }
 }
