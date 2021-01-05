@@ -39,10 +39,13 @@ nav a:hover {
 }
 
 /************  Ville & Filtres  ************/
+#search_band {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .local {
-  position: relative;
-  top: 1px;
-  left: 4px;
   width: 52px;
   max-height: 51px;
   text-align: center;
@@ -52,22 +55,38 @@ nav a:hover {
   padding: 16px;
 }
 #search_button {
-  position: relative;
-  left: 257px;
-  width: 134px;
+  width: 130px;
   height: 51px;
   background-color: #0065fc;
   color: white;
   border-radius: 0px 15px 15px 0px;
 }
+#search_button_glass {
+  width: 21px;
+  max-height: 51px;
+  text-align: center;
+  color: white;
+  background-color: #0065fc;
+  border-radius: 0px 15px 15px 0px;
+  padding: 16px;
+  display: none;
+}
+
 #search_line {
-  position: absolute;
-  width: 234px;
   height: 45px;
   font-size: 1.1em;
   font-family: Raleway;
   font-weight: bold;
   padding-left: 17px;
+}
+.filtres {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.filtres h3 {
+  padding-top: 10px;
 }
 .filtres ul {
   width: 70%;
@@ -75,9 +94,6 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-.filtres_titre {
-  padding-top: 16px;
 }
 .filters_list {
   height: 46px;
@@ -150,7 +166,8 @@ nav a:hover {
   background-color: white;
   border-radius: 16px;
 }
-#pos_h p {
+#pos_h h3 {
+  font-size: 1em;
   margin-top: 0;
   padding-left: 12px;
   padding-top: 13px;
@@ -203,7 +220,8 @@ nav a:hover {
   display: flex;
   flex-direction: row;
 }
-#pos_p p {
+#pos_p h3 {
+  font-size: 1em;
   padding-left: 20px;
   padding-right: 40px;
 }
@@ -350,54 +368,204 @@ footer h2 {
 
 /***  IPhone 8  ***/
 @media (max-width: 375px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   body {
-    width: 100%;
-    margin: auto;
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 95%;
+    width: 375px;
   }
   #container {
-    margin: 0 20px;
+    margin: 20px;
   }
-
-  .filtres ul {
-    width: 100%;
+  section h2 {
+    word-wrap: normal;
+  }
+  /************  Navigation  ************/
+  nav ul {
+    width: 375px;
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    padding-top: 35px;
+    margin-left: 0;
   }
+  nav a {
+    color: black;
+    text-decoration: none;
+  }
+  .inscription {
+    color: #0065fc;
+  }
+  nav a:hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+    padding-top: 30px;
+  }
+
+  /************  Ville & Filtres  ************/
+  .local {
+    width: 22px;
+  }
+
+  #search_band {
+    width: 333px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #search_button {
+    display: none;
+  }
+  #search_button_glass {
+    width: 21px;
+    display: initial;
+  }
+
+  #search_line {
+    width: 241px;
+    height: 47px;
+    font-size: 1.1em;
+    font-family: Raleway;
+    font-weight: bold;
+    padding-left: 17px;
+  }
+  .filtres {
+    width: 335px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .filtres ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .filters_list {
+    height: 46px;
+    padding-right: 10px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border: 2px solid #d9d9d9;
+    border-radius: 46px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /************  Hébergements  ************/
+
   #places {
-    width: 374px;
+    width: 375px;
     display: flex;
     flex-direction: column-reverse;
+  }
+  #hebergements {
+    width: 335px;
+    height: auto;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  #hebergements img {
+    width: 323px;
+    height: 104px;
+  }
+  #pos_h {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #pos_h article {
+    width: 323px;
+    height: 189px;
+    padding: 5px;
+    box-shadow: 5px 5px #f5f5f5;
+  }
+  #pos_h h3 {
+    font-size: 1em;
+    margin-top: 0;
+    padding-left: 12px;
+    padding-top: 13px;
+  }
+
+  /************  Populaires  ************/
+
+  #populaires {
+    width: 335px;
+    height: 606px;
+    padding: 20px;
+    margin-left: -20px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .graph {
+    margin-left: 55px;
+  }
+  #populaires img {
+    width: 127px;
+    height: 134px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
+  #pos_p article {
+    width: 290px;
+    height: 134px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+  #pos_p h3 {
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+  #pos_p a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bluestar {
+    color: #0065fc;
+  }
+  .greystar {
+    color: #d9d9d9;
   }
 
   /************  Activités  ************/
 
   #act {
-    width: 100%;
+    width: 335px;
     height: auto;
     border-radius: 16px;
-    margin-top: 60px;
+    margin-top: 30px;
     padding-top: 10px;
     padding-left: 50px;
   }
   #activites {
-    width: 1340px;
-    height: 500px;
-    margin-left: -50px;
+    width: 335px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  #activites article {
-    width: 300px;
-  }
   #activites img {
-    width: 334px;
+    width: 335px;
     height: 190px;
     margin-bottom: -4px;
     object-fit: cover;
@@ -409,7 +577,7 @@ footer h2 {
     text-decoration: none;
   }
   #activites h3 {
-    width: 280px;
+    width: 375px;
     padding-top: 10px;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -419,12 +587,15 @@ footer h2 {
   }
 
   footer {
-    width: 1440px;
+    width: 375px;
     background-color: #f2f2f2;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+  footer a {
+    margin-right: 0px;
   }
 }
 
