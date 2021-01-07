@@ -154,6 +154,15 @@ nav a:hover {
   display: flex;
   flex-direction: row;
 }
+.prix {
+  font-size: 0.8em;
+  font-weight: initial;
+  padding: 7px 0 7px 12px;
+}
+article p {
+  margin: 0;
+  padding-left: 12px;
+}
 #hebergements {
   width: 880px;
   height: 606px;
@@ -184,16 +193,13 @@ nav a:hover {
 }
 #pos_h h3 {
   font-size: 1em;
-  margin-top: 0;
+  margin: 0;
   padding-left: 12px;
   padding-top: 13px;
 }
 #pos_h a {
   color: black;
   text-decoration: none;
-}
-.prix {
-  font-size: 0.7em;
 }
 .info {
   color: #0065fc;
@@ -224,6 +230,15 @@ nav a:hover {
   border-radius: 10px 0 0 10px;
   object-fit: cover;
 }
+.pop {
+  display: flex;
+  flex-direction: column;
+}
+.pop p {
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
 #pos_p {
   display: grid;
   grid-template-columns: 1fr;
@@ -246,6 +261,8 @@ nav a:hover {
 }
 #pos_p h3 {
   padding-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .bluestar {
@@ -296,7 +313,6 @@ nav a:hover {
   margin-top: 0;
   background-color: white;
   border-radius: 0 0 16px 16px;
-  box-shadow: 5px 5px #f3f3f3a1;
 }
 #port {
   grid-column-start: 1;
@@ -391,7 +407,7 @@ footer h2 {
     width: 100%;
   }
   #container {
-    margin: 20px;
+    margin: 0 20px;
   }
 
   header {
@@ -455,7 +471,7 @@ footer h2 {
   }
 
   #search_band {
-    width: 89%;
+    max-width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -470,7 +486,7 @@ footer h2 {
   }
 
   #search_line {
-    width: 100%;
+    max-width: 85%;
     height: 47px;
     font-size: 1.1em;
     font-family: Raleway;
@@ -494,12 +510,12 @@ footer h2 {
   /************  Hébergements  ************/
 
   #places {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
   }
   #hebergements {
-    width: auto;
+    width: 100%;
     height: auto;
     background-color: white;
     border-radius: 16px;
@@ -507,7 +523,7 @@ footer h2 {
     padding-left: 0;
   }
   #hebergements img {
-    width: 323px;
+    max-width: 100%;
   }
   #pos_h {
     display: flex;
@@ -515,7 +531,7 @@ footer h2 {
     justify-content: space-between;
   }
   #pos_h article {
-    width: 323px;
+    max-width: 100%;
     height: 189px;
     box-shadow: 5px 5px #f5f5f5;
   }
@@ -551,7 +567,7 @@ footer h2 {
   /************  Activités  ************/
 
   #act {
-    width: 335px;
+    width: 100%;
     height: auto;
     border-radius: 16px;
     margin-top: 30px;
@@ -559,14 +575,18 @@ footer h2 {
     padding-left: 50px;
   }
   #activites {
-    width: 335px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+  #activites article {
+    width: 100%;
+  }
+
   #activites img {
-    width: 335px;
+    width: 100%;
     height: 190px;
   }
   #activites h3 {
@@ -574,7 +594,7 @@ footer h2 {
   }
 
   footer {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -710,9 +730,6 @@ footer h2 {
     color: black;
     text-decoration: none;
   }
-  .prix {
-    font-size: 0.7em;
-  }
   .info {
     color: blue;
     padding: 2px 8px;
@@ -790,6 +807,7 @@ footer h2 {
   }
   #activites article {
     width: 300px;
+    box-shadow: 5px 5px #f3f3f3a1;
   }
   #activites img {
     margin-bottom: -4px;
@@ -807,7 +825,6 @@ footer h2 {
     margin-top: 0;
     background-color: white;
     border-radius: 0 0 16px 16px;
-    box-shadow: 5px 5px #f3f3f3a1;
   }
   #port {
     grid-column-start: 1;
