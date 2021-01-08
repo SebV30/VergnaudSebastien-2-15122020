@@ -160,7 +160,7 @@ nav a:hover {
   display: flex;
 }
 /************  Hébergements  ************/
-#€ {
+#eur {
   font-weight: bold;
 }
 #places {
@@ -761,8 +761,9 @@ footer h2 {
   }
   #populaires img {
     min-width: 65px;
-    max-width: 150px;
-    height: 200px;
+    max-width: 72px;
+    min-height: 150px;
+    height: auto;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
   }
@@ -774,7 +775,8 @@ footer h2 {
   #pos_p article {
     min-width: 27%;
     max-width: 28%;
-    height: 200px;
+    min-height: 150px;
+    height: auto;
     margin-right: 40px;
     margin-bottom: 20px;
     padding: 5px;
@@ -792,7 +794,6 @@ footer h2 {
   }
   #pos_p h3 {
     padding-left: 12px;
-    word-break: break-word;
   }
 
   .bluestar {
