@@ -46,6 +46,10 @@ nav a:hover {
 }
 
 /************  Ville & Filtres  ************/
+
+#v_f p {
+  font-weight: initial;
+}
 #search_band {
   display: flex;
   flex-direction: row;
@@ -64,6 +68,9 @@ nav a:hover {
 #search_button {
   width: 130px;
   height: 51px;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 1.2em;
   background-color: #0065fc;
   color: white;
   border: 1px solid #f2f2f2;
@@ -82,6 +89,7 @@ nav a:hover {
 
 #search_line {
   height: 45px;
+  color: black;
   font-size: 1.1em;
   font-family: Raleway;
   font-weight: bold;
@@ -89,6 +97,9 @@ nav a:hover {
   border: 1px solid #f2f2f2;
   border-right: none;
   border-left: none;
+}
+::placeholder {
+  color: black;
 }
 .filtres {
   width: 80%;
@@ -149,7 +160,9 @@ nav a:hover {
   display: flex;
 }
 /************  Hébergements  ************/
-
+#€ {
+  font-weight: bold;
+}
 #places {
   display: flex;
   flex-direction: row;
@@ -402,8 +415,8 @@ footer h2 {
 }
 /************  Média Queries  ************/
 
-/***  IPhone 8  ***/
-@media (min-width: 320px) and (max-width: 375px) {
+/***  Mobile  ***/
+@media (min-width: 320px) and (max-width: 425px) {
   body {
     width: 100%;
   }
@@ -457,7 +470,6 @@ footer h2 {
     grid-row-end: 1;
     padding-top: 10px;
   }
-
   nav a:hover {
     border-top: none;
     border-bottom: 2px solid #0065fc;
@@ -518,12 +530,12 @@ footer h2 {
   /************  Hébergements  ************/
 
   #places {
-    width: 100%;
+    width: 99%;
     display: flex;
     flex-direction: column-reverse;
   }
   #hebergements {
-    width: 320px;
+    width: 300px;
     height: auto;
     background-color: white;
     border-radius: 16px;
@@ -531,7 +543,7 @@ footer h2 {
     padding-left: 0;
   }
   #hebergements img {
-    width: 320px;
+    width: 300px;
   }
   #pos_h {
     display: flex;
@@ -539,7 +551,7 @@ footer h2 {
     justify-content: space-between;
   }
   #pos_h article {
-    width: 320px;
+    width: 300px;
     height: 189px;
     box-shadow: 5px 5px #f5f5f5;
   }
@@ -547,7 +559,7 @@ footer h2 {
   /************  Populaires  ************/
 
   #populaires {
-    width: 335px;
+    width: 365px;
     height: 606px;
     padding: 20px;
     margin-left: -20px;
@@ -613,8 +625,8 @@ footer h2 {
   }
 }
 
-/***  IPad  ***/
-@media (min-width: 376px) and (max-width: 768px) {
+/***  Tablettes  ***/
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
     width: auto;
     margin: 5%;
@@ -712,6 +724,8 @@ footer h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    margin-left: -40px;
+    justify-items: center;
   }
   #pos_h article {
     width: 236px;
@@ -746,19 +760,21 @@ footer h2 {
     margin-left: 98px;
   }
   #populaires img {
-    max-width: 500px;
-    max-height: 500px;
+    min-width: 65px;
+    max-width: 150px;
+    height: 200px;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
   }
   #pos_p {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   #pos_p article {
-    width: auto;
-    height: auto;
+    min-width: 27%;
+    max-width: 28%;
+    height: 200px;
     margin-right: 40px;
     margin-bottom: 20px;
     padding: 5px;
@@ -775,7 +791,8 @@ footer h2 {
     justify-content: center;
   }
   #pos_p h3 {
-    padding-left: 20px;
+    padding-left: 12px;
+    word-break: break-word;
   }
 
   .bluestar {
