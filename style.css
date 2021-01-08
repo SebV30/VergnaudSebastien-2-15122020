@@ -32,15 +32,24 @@ nav .act {
 nav a {
   text-decoration: none;
 }
-.inscription {
+nav a:visited {
+  color: black;
+}
+
+.inscription a {
   color: #0065fc;
 }
 nav a:hover {
+  color: #0065fc;
   border-top: 2px solid #0065fc;
   padding-top: 30px;
 }
 
 /************  Ville & Filtres  ************/
+
+#v_f p {
+  font-weight: initial;
+}
 #search_band {
   display: flex;
   flex-direction: row;
@@ -59,8 +68,12 @@ nav a:hover {
 #search_button {
   width: 130px;
   height: 51px;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 1.2em;
   background-color: #0065fc;
   color: white;
+  border: 1px solid #f2f2f2;
   border-radius: 0px 15px 15px 0px;
 }
 #search_button_glass {
@@ -76,10 +89,17 @@ nav a:hover {
 
 #search_line {
   height: 45px;
+  color: black;
   font-size: 1.1em;
   font-family: Raleway;
   font-weight: bold;
   padding-left: 17px;
+  border: 1px solid #f2f2f2;
+  border-right: none;
+  border-left: none;
+}
+::placeholder {
+  color: black;
 }
 .filtres {
   width: 80%;
@@ -106,11 +126,13 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
 }
-.filtres li:hover,
-.filtres a:hover {
-  color: white;
+.filtres li:hover {
   background-color: #0065fc;
 }
+.filtres li:hover a {
+  color: white;
+}
+
 .filtres a {
   color: black;
   text-decoration: none;
@@ -133,12 +155,26 @@ nav a:hover {
   border-radius: 23px;
   background-color: #deebff;
 }
-
+#info {
+  font-weight: initial;
+  display: flex;
+}
 /************  Hébergements  ************/
-
+#eur {
+  font-weight: bold;
+}
 #places {
   display: flex;
   flex-direction: row;
+}
+.prix {
+  font-size: 0.8em;
+  font-weight: initial;
+  padding: 7px 0 7px 12px;
+}
+article p {
+  margin: 0;
+  padding-left: 12px;
 }
 #hebergements {
   width: 880px;
@@ -170,7 +206,7 @@ nav a:hover {
 }
 #pos_h h3 {
   font-size: 1em;
-  margin-top: 0;
+  margin: 0;
   padding-left: 12px;
   padding-top: 13px;
 }
@@ -178,13 +214,13 @@ nav a:hover {
   color: black;
   text-decoration: none;
 }
-.prix {
-  font-size: 0.7em;
-}
 .info {
-  color: blue;
-  padding: 2px 8px;
+  color: #0065fc;
+  padding: 8px 14px;
+  border: 1px solid grey;
   border-radius: 24px;
+  margin-right: 10px;
+  transform: scale(0.75);
 }
 
 /************  Populaires  ************/
@@ -208,6 +244,15 @@ nav a:hover {
   border-radius: 10px 0 0 10px;
   object-fit: cover;
 }
+.pop {
+  display: flex;
+  flex-direction: column;
+}
+.pop p {
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
 #pos_p {
   display: grid;
   grid-template-columns: 1fr;
@@ -230,6 +275,8 @@ nav a:hover {
 }
 #pos_p h3 {
   padding-left: 12px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .bluestar {
@@ -261,6 +308,8 @@ nav a:hover {
 }
 #activites article {
   width: 300px;
+  box-shadow: 5px 5px #f2f2f2;
+  border-radius: 16px;
 }
 #activites img {
   margin-bottom: -4px;
@@ -278,7 +327,6 @@ nav a:hover {
   margin-top: 0;
   background-color: white;
   border-radius: 0 0 16px 16px;
-  box-shadow: 5px 5px #f3f3f3a1;
 }
 #port {
   grid-column-start: 1;
@@ -367,13 +415,13 @@ footer h2 {
 }
 /************  Média Queries  ************/
 
-/***  IPhone 8  ***/
-@media (max-width: 375px) {
+/***  Mobile  ***/
+@media (min-width: 320px) and (max-width: 425px) {
   body {
     width: 100%;
   }
   #container {
-    margin: 20px;
+    margin: 0 20px;
   }
 
   header {
@@ -422,7 +470,6 @@ footer h2 {
     grid-row-end: 1;
     padding-top: 10px;
   }
-
   nav a:hover {
     border-top: none;
     border-bottom: 2px solid #0065fc;
@@ -437,7 +484,7 @@ footer h2 {
   }
 
   #search_band {
-    width: 89%;
+    max-width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -452,7 +499,7 @@ footer h2 {
   }
 
   #search_line {
-    width: 100%;
+    max-width: 85%;
     height: 47px;
     font-size: 1.1em;
     font-family: Raleway;
@@ -468,20 +515,27 @@ footer h2 {
     flex-wrap: wrap;
   }
   .filtres ul {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -40px;
+  }
+  .filters_list {
+    margin-right: 12px;
+    margin-top: 10px;
   }
 
   /************  Hébergements  ************/
 
   #places {
-    width: auto;
+    width: 99%;
     display: flex;
     flex-direction: column-reverse;
   }
   #hebergements {
-    width: auto;
+    width: 300px;
     height: auto;
     background-color: white;
     border-radius: 16px;
@@ -489,7 +543,7 @@ footer h2 {
     padding-left: 0;
   }
   #hebergements img {
-    width: 323px;
+    width: 300px;
   }
   #pos_h {
     display: flex;
@@ -497,7 +551,7 @@ footer h2 {
     justify-content: space-between;
   }
   #pos_h article {
-    width: 323px;
+    width: 300px;
     height: 189px;
     box-shadow: 5px 5px #f5f5f5;
   }
@@ -505,7 +559,7 @@ footer h2 {
   /************  Populaires  ************/
 
   #populaires {
-    width: 335px;
+    width: 365px;
     height: 606px;
     padding: 20px;
     margin-left: -20px;
@@ -533,7 +587,7 @@ footer h2 {
   /************  Activités  ************/
 
   #act {
-    width: 335px;
+    width: 100%;
     height: auto;
     border-radius: 16px;
     margin-top: 30px;
@@ -541,14 +595,18 @@ footer h2 {
     padding-left: 50px;
   }
   #activites {
-    width: 335px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+  #activites article {
+    width: 100%;
+  }
+
   #activites img {
-    width: 335px;
+    width: 100%;
     height: 190px;
   }
   #activites h3 {
@@ -556,7 +614,7 @@ footer h2 {
   }
 
   footer {
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -567,8 +625,8 @@ footer h2 {
   }
 }
 
-/***  IPad  ***/
-@media (min-width: 376px) and (max-width: 768px) {
+/***  Tablettes  ***/
+@media (min-width: 768px) and (max-width: 1024px) {
   header {
     width: auto;
     margin: 5%;
@@ -607,7 +665,7 @@ footer h2 {
   }
   /************  Ville & Filtres  ************/
   #search_band {
-    width: auto;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -641,15 +699,7 @@ footer h2 {
     grid-column-gap: 5%;
     grid-row-gap: 10%;
   }
-  .filters_list {
-    height: 46px;
-    padding-right: 20px;
-    border: 2px solid #d9d9d9;
-    border-radius: 46px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
+
   /************  Hébergements  ************/
 
   #places {
@@ -674,6 +724,8 @@ footer h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    margin-left: -40px;
+    justify-items: center;
   }
   #pos_h article {
     width: 236px;
@@ -692,9 +744,6 @@ footer h2 {
     color: black;
     text-decoration: none;
   }
-  .prix {
-    font-size: 0.7em;
-  }
   .info {
     color: blue;
     padding: 2px 8px;
@@ -711,18 +760,22 @@ footer h2 {
     margin-left: 98px;
   }
   #populaires img {
-    max-width: 500px;
-    max-height: 500px;
+    min-width: 65px;
+    max-width: 72px;
+    min-height: 150px;
+    height: auto;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
   }
   #pos_p {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   #pos_p article {
-    width: auto;
+    min-width: 27%;
+    max-width: 28%;
+    min-height: 150px;
     height: auto;
     margin-right: 40px;
     margin-bottom: 20px;
@@ -740,7 +793,7 @@ footer h2 {
     justify-content: center;
   }
   #pos_p h3 {
-    padding-left: 20px;
+    padding-left: 12px;
   }
 
   .bluestar {
@@ -772,6 +825,7 @@ footer h2 {
   }
   #activites article {
     width: 300px;
+    box-shadow: 5px 5px #f3f3f3a1;
   }
   #activites img {
     margin-bottom: -4px;
@@ -789,7 +843,6 @@ footer h2 {
     margin-top: 0;
     background-color: white;
     border-radius: 0 0 16px 16px;
-    box-shadow: 5px 5px #f3f3f3a1;
   }
   #port {
     grid-column-start: 1;

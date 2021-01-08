@@ -22,13 +22,13 @@
                 <ul>
                     <li class="heberg"><a href="#hebergements">Hébergements</a></li>
                     <li class="act"><a href="#activites">Activités</a></li>
-                    <li class="inscription"><a href="x">S'inscrire</a></li>
+                    <li class="inscription"><a href="#">S'inscrire</a></li>
                 </ul>
             </nav>
         </header>
         <!--Ville & Filtres-->
         <main>
-            <section>
+            <section id="v_f">
                 <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
                 <p>En plein centre ville ou en pleine nature</p>
                 <form id="search_band" method="POST" action="traitement.php">
@@ -41,20 +41,21 @@
                     <h3>Filtres</h3>
                     <ul>
                         <li class="filters_list"><span class="ico_filtres"><i class="fas fa-money-bill-wave"></i></span>
-                            <a href="x">Économique</a>
+                            <a href="#">Économique</a>
                         </li>
                         <li class="filters_list"><span class="ico_filtres_f"><i class="fas fa-child"></i></span>
-                            <a href="x">Familial</a>
+                            <a href="#">Familial</a>
                         </li>
                         <li class="filters_list"><span class="ico_filtres"><i class="fas fa-heart"></i></span>
-                            <a href="x">Romantique</a>
+                            <a href="#">Romantique</a>
                         </li>
                         <li class="filters_list"><span class="ico_filtres"><i class="fas fa-dog"></i></span><a
-                                href="x">Animaux
+                                href="#">Animaux
                                 autorisés</a></li>
                     </ul>
-                    <p><span class="info"><i class="fas fa-info"></i></span> Plus de 500 logments sont disponibles dans
-                        cette ville</p>
+                    <p id="info"><span class="info"><i class="fas fa-info"></i></span> <span>Plus de 500 logments sont
+                            disponibles dans
+                            cette ville</span></p>
                 </div>
             </section>
 
@@ -68,12 +69,13 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
                                     alt="Auberge de la Cannebière">
-                                <h3>Auberge de la Cannebière<br />
-                                    <span class="prix">Nuit à partir de 25€</span><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                <h3>Auberge de la Cannebière</h3>
+                                <p class="prix">Nuit à partir de <span class="€">25€</span></p>
+                                <p class="prix">Nuit à partir de 25€</p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i></span><span
-                                        class="greystar"><i class="fas fa-star"></i></span>
-                                </h3>
+                                        class="greystar"><i class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <article>
@@ -81,12 +83,12 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
                                     alt="Hôtel du Port">
-                                <h3>Hôtel du Port<br />
-                                    <span class="prix">Nuit à partir de 52€</span><br /><span class="bluestar"><i
+                                <h3>Hôtel du Port</h3>
+                                <p class="prix">Nuit à partir de <span class="eur">52€</span></p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i></span>
-                                </h3>
+                                            class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <article>
@@ -94,12 +96,12 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg"
                                     alt="Hôtel Les mouettes">
-                                <h3>Hôtel Les mouettes<br />
-                                    <span class="prix">Nuit à partir de 76€</span><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                <h3>Hôtel Les mouettes</h3>
+                                <p class="prix">Nuit à partir de <span class="eur">76€</span></p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i></span><span
-                                        class="greystar"><i class="fas fa-star"></i></span>
-                                </h3>
+                                        class="greystar"><i class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <article>
@@ -107,12 +109,12 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
                                     alt="Hôtel de la mer">
-                                <h3>Hôtel de la mer<br />
-                                    <span class="prix">Nuit à partir de 46€</span><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                <h3>Hôtel de la mer</h3>
+                                <p class="prix">Nuit à partir de <span class="eur">46€</span></p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i></span><span class="greystar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                </h3>
+                                            class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <article>
@@ -120,12 +122,12 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
                                     alt="Auberge Le Panier">
-                                <h3>Auberge Le Panier<br />
-                                    <span class="prix">Nuit à partir de 23€</span><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                <h3>Auberge Le Panier</h3>
+                                <p class="prix">Nuit à partir de <span class="eur">23€</span></p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i></span><span
-                                        class="greystar"><i class="fas fa-star"></i></span>
-                                </h3>
+                                        class="greystar"><i class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <article>
@@ -133,12 +135,12 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
                                     alt="Hôtel chez Amina">
-                                <h3>Hôtel chez Amina<br />
-                                    <span class="prix">Nuit à partir de 96€</span><br /><span class="bluestar"><i
+                                <h3>Hôtel chez Amina</h3>
+                                <p class="prix">Nuit à partir de <span class="eur">96€</span></p>
+                                <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                             class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i></span>
-                                </h3>
+                                            class="fas fa-star"></i></span></p>
+
                             </a>
                         </article>
                         <p>Afficher plus</p>
@@ -153,12 +155,14 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                                     alt="Hôtel Le soleil du matin">
-                                <h3>Hôtel Le soleil du matin<br />
-                                    <span class="prix">Nuit à partir de 128€</span><br /><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i></span>
-                                </h3>
+                                <div class="pop">
+                                    <h3>Hôtel Le soleil du matin</h3>
+                                    <p class="prix">Nuit à partir de <span class="eur">128€</span></p>
+                                    <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i></span></p>
+                                </div>
+
                             </a>
                         </article>
 
@@ -167,12 +171,13 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg"
                                     alt="Au coeur de l'eau Chambres d'hôtes">
-                                <h3>Au coeur de l'eau Chambres d'hôtes<br />
-                                    <span class="prix">Nuit à partir de 71€</span><br /><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i></span><span
-                                        class="greystar"><i class="fas fa-star"></i></span>
-                                </h3>
+                                <div class="pop">
+                                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                                    <p class="prix">Nuit à partir de <span class="eur">71€</span></p>
+                                    <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></span><span
+                                            class="greystar"><i class="fas fa-star"></i></span></p>
+                                </div>
                             </a>
                         </article>
 
@@ -181,12 +186,13 @@
                                 target="_blank"><img
                                     src="images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
                                     alt="Hôtel Tout bleu et Blanc">
-                                <h3>Hôtel Tout bleu et Blanc<br />
-                                    <span class="prix">Nuit à partir de 68€</span><br /><br /><span class="bluestar"><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                            class="fas fa-star"></i><i class="fas fa-star"></i></span><span
-                                        class="greystar"><i class="fas fa-star"></i></span>
-                                </h3>
+                                <div class="pop">
+                                    <h3>Hôtel Tout bleu et Blanc</h3>
+                                    <p class="prix">Nuit à partir de <span class="eur">68€</span></p>
+                                    <p><span class="bluestar"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i></span><span
+                                            class="greystar"><i class="fas fa-star"></i></span></p>
+                                </div>
                             </a>
                         </article>
                     </div>
