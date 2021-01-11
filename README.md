@@ -4,3 +4,6 @@ Modif intervalle "screen width" dasn les médias queries pour adaptation du resp
 
 08-01-21 13:51 :
 Modif Populaires Tablettes : passage en flex avec wrap pour adaptation écrans.
+
+11-01-21 10:30 :
+Correction suite pb de merge.
