@@ -160,7 +160,7 @@ nav a:hover {
   display: flex;
 }
 /************  Hébergements  ************/
-#eur {
+.eur {
   font-weight: bold;
 }
 #places {
