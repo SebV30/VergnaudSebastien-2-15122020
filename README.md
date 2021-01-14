@@ -7,3 +7,6 @@ Modif Populaires Tablettes : passage en flex avec wrap pour adaptation écrans.
 
 11-01-21 10:30 :
 Correction suite pb de merge.
+
+14-01-21 11:00 :
+Fix suite Soutenance Blanche.
