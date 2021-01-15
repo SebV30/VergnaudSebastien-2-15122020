@@ -10,3 +10,6 @@ Correction suite pb de merge.
 
 14-01-21 11:00 :
 Fix suite Soutenance Blanche.
+
+15-01-21 15:00 :
+Reprise css responsive mobile => enlèvement scroll horizontal à l'affichage du site.
